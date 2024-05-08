@@ -1,0 +1,20 @@
+// Arquivo: script.js
+
+jQuery(document).ready(function(){
+  jQuery.getJSON("glossary.json", function(data) {
+       
+        var items = [];
+        
+      
+        jQuery.each(data, function(key, val) {
+         var itemHTML = "<div class='term'><h2>" + key + "</h2><p class='definition'>" + val + "</p></div>";
+         items.push(itemHTML);
+        });
+                
+        jQuery("#glossary").append(items.join(""));
+        
+               jQuery(".term").click(function(){
+            jQuery(this).find(".definition").toggleClass("show");
+        });
+    });
+});
