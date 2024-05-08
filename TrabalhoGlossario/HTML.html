@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Meu Dicionário Javascript!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        
+        body, h1, p, textarea {
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        .image-container {
+            text-align: center; 
+            margin-top: 100px; 
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <a href="https://DicionarioAndre/pagina.html"></a>
+    
+    <div class="image-container">
+        
+        <img src="https://alexmontanha.github.io/maps/assets/img/png-javascript-badge-picture-8.png" alt="Descrição da Imagem" width="200" height="200">
+    </div>
+
+    
+    <header>
+        <h1>Bem-vindo ao Meu Dicionário Javascript!</h1>
+        <h2>Escolha um verbete no combo abaixo:</h2>
+        
+        
+        <button class="accordion">O que é JavaScript?</button>
+        <div class="panel">
+            <p>JavaScript é uma linguagem de programação que permite implementar funcionalidades mais complexas em páginas web. Desde o momento em que a página web é exibida no navegador, JavaScript é usado para tornar a página mais responsiva, interativa e dinâmica</p>
+        </div>
+
+        <button class="accordion">Statement for o que é?</button>
+        <div class="panel">
+            <p>O statement 'for' cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.</p>
+        </div>
+
+        <button class="accordion">Funções em JavaScript</button>
+        <div class="panel">
+            <p>Uma função em JavaScript é um bloco de código projetado para realizar uma tarefa específica. Uma função é executada quando 'algo' a invoca (chama).</p>
+        </div>
+
+        <button class="accordion">Objetos em JavaScript</button>
+        <div class="panel">
+            <p>JavaScript é uma linguagem baseada em objetos. Um objeto é uma coleção de propriedades, e uma propriedade é uma associação entre um nome (ou chave) e um valor.</p>
+        </div>
+
+        <h2>Informação da pergunta/informação selecionada:</h>
+        <textarea id="respostaTextArea"></textarea>
+    </header>
+</a>
+
+
+    
+    <main id="glossary">
+        
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            
+            jQuery(".accordion").click(function(){
+                var resposta = jQuery(this).next('.panel').find('p').text();
+                jQuery("#respostaTextArea").val(resposta);
+            });
+        });
+    </script>
+</body>
+</html>

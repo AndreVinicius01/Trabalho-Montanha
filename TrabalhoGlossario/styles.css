@@ -1,0 +1,77 @@
+/* Arquivo: styles.css */
+
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Montserrat', sans-serif; /* Definindo a fonte */
+    margin: 0; /* Removendo margens */
+    padding: 0; /* Removendo preenchimento */
+    background-color: #000000; /* Cor de fundo preta */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #000000; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 20px 0; /* Preenchimento superior e inferior */
+}
+
+/* Estilo para os botões do acordeão */
+.accordion {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    display: block;
+    width: 300px; /* Defina o tamanho desejado */
+    padding: 10px 0;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background-color: #ffffff; /* Cor de fundo dos botões */
+    color: #000000; /* Cor do texto dos botões */
+    border-radius: 50px; /* Borda arredondada */
+    margin-bottom: 8px; /* Margem inferior entre os botões */
+}
+
+.accordion:hover {
+    background-color: #7c7b7b; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para os painéis de resposta */
+.panel {
+    display: none;
+    padding: 20px; /* Adicionando padding interno para afastar das bordas */
+    background-color: #ffffff; /* Cor de fundo original */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 50px; /* Borda arredondada */
+    margin-bottom: 10px; /* Margem inferior entre os painéis */
+}
+
+/* Mostrar o painel de resposta selecionado */
+.panel.show {
+    display: block;
+    max-height: 200px; /* Altura máxima do painel de resposta */
+    margin-bottom: 20px; /* Margem inferior */
+    border-radius: 50px; /* Borda arredondada */
+}
+
+/* Estilo para o contêiner do glossário */
+#glossary {
+    padding: 20px; /* Adicionando preenchimento */
+    text-align: center; /* Centralizando o conteúdo */
+    border-radius: 50px; /* Borda arredondada */
+}
+
+/* Aumentar a altura do textarea */
+textarea {
+    height: 50px; /* Defina a altura desejada */
+    width: 70%; /* Faça com que o textarea ocupe toda a largura disponível */
+    margin-top: 20px; /* Adiciona espaço acima do textarea */
+    text-align: center;
+    border-radius: 50px; /* Borda arredondada */
+    padding: 30px 0;
+    
+}
+
